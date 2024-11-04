@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MimirDemo</string>
+    <string name="title_activity_main_menu">MainMenu</string>
+    <string name="title_activity_camera_screen">CameraScreen</string>
+    <string name="title_activity_mode_screen">ModeScreen</string>
+    <string name="title_activity_camera_preview">CameraPreview</string>
+    <string name="title_activity_camera_permission_request">CameraPermissionRequest</string>
+</resources>
