@@ -5,8 +5,9 @@ import ollama
 
 # Configuration
 GITHUB_REPO = "HoujieXiong/EC463_mimir"  # Replace with the repository in 'owner/repo' format
-TARGET_FILE_PATH = "feedback.txt"  # Replace with the file path in the repo
+TARGET_FILE_PATH = "image.jpg"  # Replace with the file path in the repo
 LOCAL_SAVE_PATH = "image.jpg"  # File to save locally
+FEEDBACK_PATH="feedback.txt"
 CHECK_INTERVAL = 5  # Interval in seconds
 LATEST_COMMIT = None  # Store the latest commit hash
 
