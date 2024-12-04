@@ -7,9 +7,9 @@ import subprocess
 # Configuration
 GITHUB_REPO = "HoujieXiong/EC463_mimir"  # Replace with the repository in 'owner/repo' format
 TARGET_FILE_PATH = "image.jpg"  # Replace with the file path in the repo
-LOCAL_SAVE_PATH = "image.jpg"  # File to save locally
+LOCAL_SAVE_PATH = r"C:\Users\14216\Desktop\EC463_Mimir\Images\image.jpg"  # File to save locally
 FEEDBACK_PATH="feedback.txt"
-repo_path=r"C:\Users\14216\Desktop\EC463_Mimir\image"
+repo_path=r"C:\Users\14216\Desktop\EC463_Mimir"
 CHECK_INTERVAL = 5  # Interval in seconds
 LATEST_COMMIT = None  # Store the latest commit hash
 
@@ -69,7 +69,7 @@ def monitor_repository(repo, target_file, local_path, question):
         latest_commit = git_pull(repo_path)
 
         if latest_commit:
-            response = send_file_to_ollama("image.jpg", question)
+            response = send_file_to_ollama(LOCAL_SAVE_PATH, question)
             print(f"Ollama analysis result: {response}")
 
         time.sleep(CHECK_INTERVAL)
@@ -77,3 +77,6 @@ def monitor_repository(repo, target_file, local_path, question):
 if __name__ == "__main__":
     QUESTION = "What is this file about? answer within 100 words"  # Replace with your question for Ollama
     monitor_repository(GITHUB_REPO, TARGET_FILE_PATH, LOCAL_SAVE_PATH, QUESTION)
+
+# QUESTION = "What is this file about? answer within 100 words"
+# send_file_to_ollama(LOCAL_SAVE_PATH,QUESTION)
