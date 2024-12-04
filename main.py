@@ -21,19 +21,18 @@ camera.start()
 try:
     print("Starting periodic image capture. Press Ctrl+C to stop.")
     count = 1  # Image counter for unique filenames
-    while True:
-        filename = f"/home/Visual_AI/Desktop/EC463_Mimir/Images/backpack.jpg"  # Save image with a fixed name
 
-        camera.capture_file(filename)
-        print(f"Captured {filename}")
-        count += 1
+    filename = f"/home/Visual_AI/Desktop/EC463_Mimir/Images/image.jpg"  # Save image with a fixed name
+
+    camera.capture_file(filename)
+    print(f"Captured {filename}")
+    count += 1
 except KeyboardInterrupt:
     print("Stopping image capture...")
 finally:
     camera.stop()  # Stop the camera
     camera.close()  # Close resources
-    
-    
+
     
    
 
