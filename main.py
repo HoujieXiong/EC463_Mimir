@@ -143,5 +143,5 @@ def monitor_repository(repo, target_file, local_path):
 
         time.sleep(CHECK_INTERVAL)
 
-
+monitor_repository(GITHUB_REPO, TARGET_FILE_PATH, LOCAL_SAVE_PATH)
 
