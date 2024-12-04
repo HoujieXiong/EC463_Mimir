@@ -58,30 +58,35 @@ print("Changes pushed successfully.")
 def git_pull(repo_path):
     """
     Performs a `git pull` operation in the specified repository path.
-    
+
     Args:
         repo_path (str): The local path of the Git repository.
-    
+
     Returns:
-        str: The output of the `git pull` command.
+        bool: True if new changes were pulled, False otherwise.
     """
     try:
-        # Change the current working directory to the repo path
+        # Run the git pull command
         result = subprocess.run(
             ["git", "-C", repo_path, "pull"],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True
         )
+        # Check if the operation was successful
         if result.returncode == 0:
-            print("Git pull successful!")
-            return 1
+            if "Already up to date" in result.stdout:
+                print("Repository is already up to date.")
+                return False  # No new changes
+            else:
+                print("Git pull successful! Changes were pulled.")
+                return True  # New changes were fetched
         else:
-            print("Git pull failed!")
-            return 0
+            print(f"Git pull failed! Error: {result.stderr}")
+            return False
     except Exception as e:
         print(f"Error running git pull: {e}")
-        return str(e)
+        return False
 
 
 
