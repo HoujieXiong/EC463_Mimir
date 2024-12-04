@@ -121,7 +121,7 @@ def git_pull(repo_path):
         print(f"Error running git pull: {e}")
         return str(e)
         
-def monitor_repository(repo, target_file, local_path):
+def monitor_repository(repo, target_file):
     """Monitors the repository for changes and processes updates."""
     global LATEST_COMMIT
     while True:
@@ -143,5 +143,5 @@ def monitor_repository(repo, target_file, local_path):
 
         time.sleep(CHECK_INTERVAL)
 
-monitor_repository(GITHUB_REPO, TARGET_FILE_PATH, LOCAL_SAVE_PATH)
+monitor_repository(GITHUB_REPO, TARGET_FILE_PATH)
 
