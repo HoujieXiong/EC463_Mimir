@@ -3,6 +3,7 @@ import time
 import os
 import ollama
 import subprocess
+import git
 
 # Configuration
 GITHUB_REPO = "HoujieXiong/EC463_mimir"  # Replace with the repository in 'owner/repo' format
@@ -13,6 +14,27 @@ repo_path=r"C:\Users\14216\Desktop\EC463_Mimir"
 CHECK_INTERVAL = 5  # Interval in seconds
 LATEST_COMMIT = None  # Store the latest commit hash
 feedback_path = r"C:\Users\14216\Desktop\EC463_Mimir\Images\feedback.txt"
+
+
+# Path to your local Git repository
+repo_path = "/home/Visual_AI/Desktop/EC463_Mimir"
+
+# Open the repository
+repo = git.Repo(repo_path)
+
+# Stage all changes (equivalent to `git add .`)
+repo.git.add(A=True)
+
+# Commit the changes
+commit_message = "Auto Update"
+repo.index.commit(commit_message)
+
+# Push the changes to the remote repository
+origin = repo.remote(name="origin")
+origin.push()
+
+print("Changes pushed successfully.")
+
 
 
 def git_pull(repo_path):
@@ -63,7 +85,7 @@ def send_file_to_ollama(file_path, question):
         with open(feedback_path, "w", encoding="utf-8") as feedback_file:
             feedback_file.write(content)
             print(f"Cleaned response saved to {feedback_path}")
-        
+
         return content
     except Exception as e:
         print(f"Error sending file to Ollama: {e}")
@@ -79,6 +101,25 @@ def monitor_repository(repo, target_file, local_path, question):
         if latest_commit:
             response = send_file_to_ollama(LOCAL_SAVE_PATH, question)
             print(f"Ollama analysis result: {response}")
+            
+            # Path to your local Git repository
+            repo_path = "/home/Visual_AI/Desktop/EC463_Mimir"
+
+            # Open the repository
+            repo = git.Repo(repo_path)
+
+            # Stage all changes (equivalent to `git add .`)
+            repo.git.add(A=True)
+
+            # Commit the changes
+            commit_message = "Auto Update"
+            repo.index.commit(commit_message)
+
+            # Push the changes to the remote repository
+            origin = repo.remote(name="origin")
+            origin.push()
+
+            print("Changes pushed successfully.")
 
         time.sleep(CHECK_INTERVAL)
 
@@ -88,3 +129,4 @@ if __name__ == "__main__":
 
 # QUESTION = "What is this file about? answer within 100 words"
 # send_file_to_ollama(LOCAL_SAVE_PATH,QUESTION)
+
