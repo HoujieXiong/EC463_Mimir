@@ -12,7 +12,7 @@ FEEDBACK_PATH="feedback.txt"
 repo_path=r"C:\Users\14216\Desktop\EC463_Mimir"
 CHECK_INTERVAL = 5  # Interval in seconds
 LATEST_COMMIT = None  # Store the latest commit hash
-
+feedback_path = r"C:\Users\14216\Desktop\EC463_Mimir\Images\feedback.txt"
 
 
 def git_pull(repo_path):
@@ -55,8 +55,16 @@ def send_file_to_ollama(file_path, question):
                 "images": [file_path]
             }]
         )
-        print(f"Ollama response: {response}")
-        return response.get("choices", [{}])[0].get("message", {}).get("content", "No response")
+        
+        # Extract the content of the response
+        content = response.get("message", {}).get("content", "No response")
+        
+        # Clean the response and save it to a text file
+        with open(feedback_path, "w", encoding="utf-8") as feedback_file:
+            feedback_file.write(content)
+            print(f"Cleaned response saved to {feedback_path}")
+        
+        return content
     except Exception as e:
         print(f"Error sending file to Ollama: {e}")
         return "Error in Ollama processing."
