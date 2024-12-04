@@ -2,42 +2,47 @@ import requests
 import time
 import os
 import ollama
+import subprocess
 
 # Configuration
 GITHUB_REPO = "HoujieXiong/EC463_mimir"  # Replace with the repository in 'owner/repo' format
 TARGET_FILE_PATH = "image.jpg"  # Replace with the file path in the repo
 LOCAL_SAVE_PATH = "image.jpg"  # File to save locally
 FEEDBACK_PATH="feedback.txt"
+repo_path=r"C:\Users\14216\Desktop\EC463_Mimir\image"
 CHECK_INTERVAL = 5  # Interval in seconds
 LATEST_COMMIT = None  # Store the latest commit hash
 
-def get_latest_commit(repo):
-    """Fetches the latest commit hash from the repository."""
-    url = f"https://api.github.com/repos/{repo}/commits"
-    headers = {"Accept": "application/vnd.github.v3+json"}
 
-    try:
-        response = requests.get(url, headers=headers)
-        response.raise_for_status()
-        latest_commit = response.json()[0]['sha']  # Get the SHA of the latest commit
-        return latest_commit
-    except requests.exceptions.RequestException as e:
-        print(f"Error fetching latest commit: {e}")
-        return None
 
-def download_file(repo, file_path, local_path):
-    """Downloads a file from the repository."""
-    url = f"https://github.com/{repo}/blob/main/{file_path}"  # Adjust branch if necessary
+def git_pull(repo_path):
+    """
+    Performs a `git pull` operation in the specified repository path.
+    
+    Args:
+        repo_path (str): The local path of the Git repository.
+    
+    Returns:
+        str: The output of the `git pull` command.
+    """
     try:
-        response = requests.get(url)
-        response.raise_for_status()
-        with open(local_path, "wb") as file:
-            file.write(response.content)
-        print(f"Downloaded file: {file_path}")
-        return True
-    except requests.exceptions.RequestException as e:
-        print(f"Error downloading file: {e}")
-        return False
+        # Change the current working directory to the repo path
+        result = subprocess.run(
+            ["git", "-C", repo_path, "pull"],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True
+        )
+        if result.returncode == 0:
+            print("Git pull successful!")
+            return 1
+        else:
+            print("Git pull failed!")
+            return 0
+    except Exception as e:
+        print(f"Error running git pull: {e}")
+        return str(e)
+
 
 def send_file_to_ollama(file_path, question):
     """Sends a file to Ollama for analysis."""
@@ -61,24 +66,12 @@ def monitor_repository(repo, target_file, local_path, question):
     global LATEST_COMMIT
     while True:
         print("Checking for updates...")
-        latest_commit = get_latest_commit(repo)
+        latest_commit = git_pull(repo_path)
 
         if latest_commit:
-            if LATEST_COMMIT is None:
-                LATEST_COMMIT = latest_commit
-                print(f"Initial commit hash: {LATEST_COMMIT}")
-            elif latest_commit != LATEST_COMMIT:
-                print(f"New commit detected! Commit hash: {latest_commit}")
-                LATEST_COMMIT = latest_commit
+            response = send_file_to_ollama("image.jpg", question)
+            print(f"Ollama analysis result: {response}")
 
-                # Step 1: Download the updated file
-                if download_file(repo, target_file, local_path):
-                    # Step 2: Send the file to Ollama
-                    response = send_file_to_ollama(local_path, question)
-                    print(f"Ollama analysis result: {response}")
-            else:
-                print("No new updates.")
-        
         time.sleep(CHECK_INTERVAL)
 
 if __name__ == "__main__":

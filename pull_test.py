@@ -1,6 +1,6 @@
 import subprocess
 
-repo_path=""
+repo_path=r"C:\Users\14216\Desktop\EC463_Mimir"
 def git_pull(repo_path):
     """
     Performs a `git pull` operation in the specified repository path.
