@@ -136,6 +136,7 @@ def monitor_repository(repo, target_file):
                     content = file.read()
                     # Print the content
                     print(content)
+                    break
             except FileNotFoundError:
                 print(f"Error: The file at '{TARGET_FILE_PATH}' was not found.")
             except Exception as e:
