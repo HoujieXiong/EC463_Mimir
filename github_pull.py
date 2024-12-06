@@ -44,7 +44,7 @@ def send_file_to_ollama(file_path, question):
     """Sends a file to Ollama for analysis."""
     try:
         response = ollama.chat(
-            model="llava",
+            model="llama3.2-vision",
             messages=[{
                 "role": "user",
                 "content": question,
