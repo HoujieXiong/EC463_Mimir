@@ -25,8 +25,13 @@ def git_pull(repo_path):
             text=True
         )
         if result.returncode == 0:
-            print("Git pull successful!")
-            return True
+            if "Already up to date." in result.stdout:
+                print("Repository is already up to date.")
+                return False
+            else:
+                print("Git pull successful with updates!")
+                return True
+
         else:
             print(f"Git pull failed: {result.stderr}")
             return False
@@ -39,7 +44,7 @@ def send_file_to_ollama(file_path, question):
     """Sends a file to Ollama for analysis."""
     try:
         response = ollama.chat(
-            model="llama3.2-vision",
+            model="llava",
             messages=[{
                 "role": "user",
                 "content": question,
