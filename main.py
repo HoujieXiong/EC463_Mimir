@@ -9,7 +9,7 @@ import git
 
 # Initialize the camera
 camera = Picamera2()
-output_audio_path="/home/Visual_AI/Desktop/EC463_Mimir/tts/result.wav"
+
 # Create a still configuration with the desired resolution
 camera_config = camera.create_still_configuration(main={"size": (3280, 2464)})  # Set resolution to 1920x1080
 camera.configure(camera_config)
@@ -98,38 +98,7 @@ def git_pull(repo_path):
         print(f"Error running git pull: {e}")
         return False
 
- def text_to_speech(input_text, output_path, model_path):
-    """
-    Converts text to speech using Piper TTS.
-
-    Args:
-        input_text (str): Text to convert to speech.
-        output_path (str): Path to save the output WAV file.
-        model_path (str): Path to the Piper TTS model.
-
-    Returns:
-        bool: True if successful, False otherwise.
-    """
-    try:
-        result = subprocess.run(
-            ["piper", "--model", model_path, "--text", input_text, "--output_file", output_path],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True
-        )
-        if result.returncode == 0:
-            print(f"Audio file created successfully: {output_path}")
-            return True
-        else:
-            print(f"Text-to-speech conversion failed: {result.stderr}")
-            return False
-    except Exception as e:
-        print(f"Error in TTS conversion: {e}")
-        return False
-    
-
-
-
+ 
 def monitor_repository(repo, target_file):
     """Monitors the repository for changes and processes updates."""
     global LATEST_COMMIT
@@ -140,13 +109,12 @@ def monitor_repository(repo, target_file):
         if latest_commit:
             try:
                 # Open the file in read mode
-                with open(target_file, "r") as file:
-                    content = file.read().strip()
-                    print(f"Content of {target_file}: {content}")
-                    # Convert text to speech
-                    if text_to_speech(content, output_audio_path, model_path):
-                        print(f"Text-to-speech conversion completed. File saved to {output_audio_path}")
-
+                with open(TARGET_FILE_PATH, "r") as file:
+                    # Read the content of the file
+                    content = file.read()
+                    # Print the content
+                    print(content)
+                    break
             except FileNotFoundError:
                 print(f"Error: The file at '{TARGET_FILE_PATH}' was not found.")
             except Exception as e:
