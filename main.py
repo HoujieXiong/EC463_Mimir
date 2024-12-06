@@ -113,6 +113,12 @@ def monitor_repository(repo, target_file):
                     # Read the content of the file
                     content = file.read()
                     # Print the content
+                    subprocess.run(
+                        ["vlc", "feedback.wav"],
+                        stdout=subprocess.PIPE,
+                        stderr=subprocess.PIPE,
+                        text=True
+                    )
                     print(content)
                     break
             except FileNotFoundError:
