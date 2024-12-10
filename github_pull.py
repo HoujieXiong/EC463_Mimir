@@ -12,7 +12,6 @@ FEEDBACK_PATH = r"C:\Users\14216\Desktop\EC463_Mimir\feedback.txt"
 REPO_PATH = r"C:\Users\14216\Desktop\EC463_Mimir"
 CHECK_INTERVAL = 5  # Interval in seconds
 
-
 def git_pull(repo_path):
     """
     Performs a `git pull` operation in the specified repository path.
