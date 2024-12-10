@@ -99,5 +99,5 @@ def monitor_repository(repo, target_file, local_path, question):
 
 
 if __name__ == "__main__":
-    QUESTION = "What is this file about? Answer within 100 words."  # Customize your question
+    QUESTION = "What is this file about? Answer within 100 words. Make sure your output can be converted to TTS"  # Customize your question
     monitor_repository(GITHUB_REPO, TARGET_FILE_PATH, LOCAL_SAVE_PATH, QUESTION)
