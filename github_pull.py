@@ -1,103 +1,89 @@
 import time
 import os
 import ollama
-import subprocess
-import git
 
-# Configuration
-GITHUB_REPO = "HoujieXiong/EC463_mimir"  # Replace with the repository in 'owner/repo' format
-TARGET_FILE_PATH = "image.jpg"  # Replace with the file path in the repo
-LOCAL_SAVE_PATH = r"C:\Users\14216\Desktop\EC463_Mimir\Images\image.jpg"  # File to save locally
-FEEDBACK_PATH = r"C:\Users\14216\Desktop\EC463_Mimir\feedback.txt"
-REPO_PATH = r"C:\Users\14216\Desktop\EC463_Mimir"
-CHECK_INTERVAL = 5  # Interval in seconds
+CHECK_INTERVAL = 5  # seconds between checks
 
-def git_pull(repo_path):
-    """
-    Performs a `git pull` operation in the specified repository path.
-    """
-    try:
-        result = subprocess.run(
-            ["git", "-C", repo_path, "pull"],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True
-        )
-        if result.returncode == 0:
-            if "Already up to date." in result.stdout:
-                print("Repository is already up to date.")
-                return False
-            else:
-                print("Git pull successful with updates!")
-                return True
+# Path to the image file in your Google Drive folder
+IMAGE_PATH = r"C:\Users\14216\Desktop\LLAMA_463\Images\image.jpg"
 
-        else:
-            print(f"Git pull failed: {result.stderr}")
-            return False
-    except Exception as e:
-        print(f"Error running git pull: {e}")
-        return False
+# Path to the feedback file in the same (or any) Google Drive folder
+FEEDBACK_PATH = r"C:\Users\14216\Desktop\LLAMA_463\Feedback\feedback.txt"
+
+# Your question or prompt for Ollama
+QUESTION = "What is this file about? Answer within 100 words. Make sure your output can be converted to TTS."
+
 
 
 def send_file_to_ollama(file_path, question):
-    """Sends a file to Ollama for analysis."""
+    """
+    Sends a file to Ollama for analysis and saves feedback to FEEDBACK_PATH.
+    """
     try:
         response = ollama.chat(
             model="llama3.2-vision",
-            messages=[{
-                "role": "user",
-                "content": question,
-                "images": [file_path]
-            }]
+            messages=[
+                {
+                    "role": "user",
+                    "content": question,
+                    "images": [file_path]
+                }
+            ]
         )
-        # Extract the content of the response
-        content = response.get("message", {}).get("content", "No response")
         
-        # Save the feedback to a text file
+        # Extract the text response
+        content = response.get("message", {}).get("content", "No response")
+
+        # Save feedback to the text file in Google Drive
         with open(FEEDBACK_PATH, "w", encoding="utf-8") as feedback_file:
             feedback_file.write(content)
             print(f"Feedback saved to {FEEDBACK_PATH}")
-        
+
         return content
+
     except Exception as e:
         print(f"Error sending file to Ollama: {e}")
         return "Error in Ollama processing."
 
 
-def commit_and_push_changes(repo_path, commit_message):
+def monitor_google_drive_image(image_path, question):
     """
-    Stages, commits, and pushes changes in the specified Git repository.
+    Monitors a file for changes and sends it to Ollama when updated.
     """
-    try:
-        repo = git.Repo(repo_path)
-        repo.git.add(A=True)  # Stage all changes
-        repo.index.commit(commit_message)  # Commit changes
-        origin = repo.remote(name="origin")
-        origin.push()  # Push changes
-        print("Changes committed and pushed successfully.")
-    except Exception as e:
-        print(f"Error during git commit/push: {e}")
+    last_mod_time = None
 
-
-def monitor_repository(repo, target_file, local_path, question):
-    """
-    Monitors the repository for changes and processes updates.
-    """
     while True:
-        print("Checking for updates...")
-        if git_pull(REPO_PATH):
-            print("New changes detected. Processing the file...")
-            response = send_file_to_ollama(local_path, question)
-            print(f"Ollama analysis result: {response}")
-            
-            # Commit and push the feedback
-            commit_and_push_changes(REPO_PATH, "Auto-update feedback from Ollama")
+        # Only proceed if the file exists
+        print(f"1111")
+        if os.path.exists(image_path):
+            print(f"2222")
+            current_mod_time = os.path.getmtime(image_path)
+
+            # First time, just record the mod time
+            if last_mod_time is None:
+                print(f"3333")
+                response = send_file_to_ollama(image_path, question)
+                print(f"Ollama analysis result:\n{response}\n")
+                last_mod_time = current_mod_time
+
+            # Check if the file has changed
+            elif current_mod_time != last_mod_time:
+                print(f"4444")
+                print("Detected updated file in Google Drive. Processing...")
+                response = send_file_to_ollama(image_path, question)
+                print(f"Ollama analysis result:\n{response}\n")
+
+                # Update the last known mod time
+                last_mod_time = current_mod_time
+
         else:
-            print("No new changes or failed to pull changes.")
-        
+            print(f"5555")
+            print(f"File not found at {image_path}. Waiting...")
+
         time.sleep(CHECK_INTERVAL)
 
-
+# ----------------------------------
+# Main Entry Point
+# ----------------------------------
 if __name__ == "__main__":
-    QUESTION = "What is this file about? Answer within 100 words. Make sure your output can be converted to TTS"  # Customize your question
-    monitor_repository(GITHUB_REPO, TARGET_FILE_PATH, LOCAL_SAVE_PATH, QUESTION)
+    monitor_google_drive_image(IMAGE_PATH, QUESTION)
