@@ -23,9 +23,6 @@ import androidx.navigation.NavHostController
 
 @Composable
 fun MainMenuScreen(navController: NavHostController) {
-    // State variables for username and password fields
-    var username by remember { mutableStateOf("") }
-    var password by remember { mutableStateOf("") }
 
     // Box with a gray background
     Box(
@@ -60,21 +57,10 @@ fun MainMenuScreen(navController: NavHostController) {
             Spacer(modifier = Modifier.height(16.dp)) // Space between logo and TextFields
 
             // Username TextField
-            OutlinedTextField(
-                value = username,
-                onValueChange = { username = it },
-                label = { Text("Username") },
-                modifier = Modifier.fillMaxWidth(),
-            )
-
-
-            Spacer(modifier = Modifier.height(24.dp)) // Space before the button
-
-            // Enter Button
             Button(
-                onClick = { navController.navigate("modeScreen") },
+                onClick = { navController.navigate("recipeScreen") },
                 modifier = Modifier
-                        .width(150.dp),
+                    .width(150.dp),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color(0xFF8c8d95), // Background color
                     contentColor = Color.White // Text color
@@ -82,7 +68,25 @@ fun MainMenuScreen(navController: NavHostController) {
             ) {
 
 
-                Text("Enter")
+                Text("Recipe")
+            }
+
+
+            Spacer(modifier = Modifier.height(24.dp)) // Space before the button
+
+            // Enter Button
+            Button(
+                onClick = { navController.navigate("bluetoothStatus") },
+                modifier = Modifier
+                    .width(150.dp),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color(0xFF8c8d95), // Background color
+                    contentColor = Color.White // Text color
+                )
+            ) {
+
+
+                Text("Status")
             }
         }
     }
