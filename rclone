@@ -1,0 +1,2 @@
+# every time I boot PI, remember to use rclone commands
+#rclone mount LLAMA_463:LLAMA_463 /home/Visual_AI/Desktop/GoogleDrive/LLAMA_463 --vfs-cache-mode writes --poll-interval=15s
