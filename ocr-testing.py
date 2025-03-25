@@ -1,11 +1,13 @@
 from PIL import Image
 import pytesseract
+import os
 
 # Specify the path to the Tesseract executable if not in PATH (for Windows users)
 # pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-
+GOOGLE_DRIVE_BASE = "/home/Visual_AI/Desktop/GoogleDrive/LLAMA_463"
 # Load an image from file
-image_path = "Beef-Italian-pasta-Label.jpg"  # Replace with your image path
+image_path = "images.jpg"
+
 image = Image.open(image_path)
 
 # Perform OCR
