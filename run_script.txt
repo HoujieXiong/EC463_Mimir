@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Clear the log at the start of each run
+> /home/visualAI/Desktop/script_autostart.log
+
+sleep 20  # Wait 20 seconds for hardware
+
+echo "$(date): Audio service ready, starting script..." >> /home/visualAI/Desktop/script_autostart.log
+
+source /home/visualAI/Desktop/venv/bin/activate
+python /home/visualAI/Desktop/microphoneTesting/soundTest.py >> /home/visualAI/Desktop/script_autostart.log 2>&1
