@@ -1,4 +1,4 @@
-mport os
+import os
 # Automatically detect if running headless
 #headless = not os.environ.get("DISPLAY", None)
 import ctypes
@@ -6,7 +6,7 @@ from ctypes.util import find_library
 # Direct all sound through Pulse (managed by PipeWire)
 os.environ["AUDIODEV"] = "pulse"
 os.environ["SDL_AUDIODRIVER"] = "pulse"
-os.environ["PULSE_SINK"] = "bluez_output.24_10_05_B5_47_31.1"
+#os.environ["PULSE_SINK"] = "bluez_output.24_10_05_B5_47_31.1"
 
 def suppress_alsa_errors():
     try:
@@ -46,13 +46,14 @@ import openai
 import unicodedata
 
 #GPIO buttons
-from gpiozero import DigitalInputDevice, Device
-from gpiozero.pins.lgpio import LGPIOFactory
+#from gpiozero import DigitalInputDevice, Device
+#from gpiozero.pins.lgpio import LGPIOFactory
 
-Device.pin_factory = LGPIOFactory()
+#Device.pin_factory = LGPIOFactory()
 
 import threading
 import time
+
 
 
 ########################################################################
@@ -61,7 +62,7 @@ import time
 
 model = Model("/home/visualAI/Desktop/vosk-model-small-en-us-0.15")
 #recognizer = KaldiRecognizer(model, 16000, '["analyze", "liquid", "start", "stop", "yes", "no"]')
-recognizer = KaldiRecognizer(model, 16000, '["analyze", "liquid", "track", "label", "identify"]')
+recognizer = KaldiRecognizer(model, 16000, '["analyze", "liquid", "track", "label", "identify", "echo"]')
 
 # Initialize PyAudio
 p = pyaudio.PyAudio()
@@ -179,6 +180,7 @@ def extract_text(image, fingertip):
     
 def run_hand_tracking(rgb_queue, stop_event):
     last_detected_word = None 
+    cv2.namedWindow("RGB Camera", cv2.WINDOW_NORMAL)
 
     while True:
         # 👇 Check if we should stop
@@ -326,8 +328,8 @@ print("Listening...")
 
 device, rgb_queue = setup_depthai()
 
-button_api = DigitalInputDevice(17)
-button_hand_mode = DigitalInputDevice(4)
+#button_api = DigitalInputDevice(17)
+#button_hand_mode = DigitalInputDevice(4)
 
 hand_tracking_active = False
 stop_hand_tracking = threading.Event()
@@ -338,14 +340,14 @@ stop_hand_tracking = threading.Event()
 
 
 while True:
-    if button_api.value:
-        on_api_released()
-        time.sleep(1)
+    # button_api.value:
+    #    on_api_released()
+    #    time.sleep(1)
 
-    if button_hand_mode.value:
-        toggle_hand_tracking()
+    #if button_hand_mode.value:
+    #    toggle_hand_tracking()
 
-        time.sleep(1)
+       # time.sleep(1)
 
     data = stream.read(4000, exception_on_overflow=False)
     data_16k = audioop.ratecv(data, 2, 1, 44100, 16000, None)[0]
@@ -362,7 +364,9 @@ while True:
             elif word == "identify":
                 on_api_released("Identify the main object you see in as few words as possible. Ideally three to five words. ")
             elif word == "liquid":
-                on_api_released("Describe the water level of this measuring cup")
+                on_api_released("Describe the water level of the container/bottle. If it's a measuring cup try to read the measurements too.")
+            elif word == "label":
+                on_api_released("Try to read the food label if there is one, otherwise say 'no label found'")
             else:
                 #text_to_speech(word)
                 subprocess.run(["espeak", word])
