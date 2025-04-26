@@ -20,7 +20,7 @@ Houjie Xiong (xhj@bu.edu) <br>
 
 
 ### Current State of Mimir
-For our current state of Mimir, we were able to attach multiple components to our main source, the Raspberry Pi (RPi), and build on top of it to create our new assistive technology. As of right now, we currently have multiple components attached to the RPi, such as our LiDAR, RPi Camera, tactile buttons attached via soldered jumper wires. For hardware components, the LiDAR camera is attached via externally with a USB C wire attached to the RPi. The RPi Camera is attached via the RPi's connector. Tactile buttons are attached externally and are controlled by using GPIO pins with two sets of jumper wires soldered together. As for software components, we currently have ... <br>
+For our current state of Mimir, we were able to attach multiple components to our main source, the Raspberry Pi 4 (RPi 4), and build on top of it to create our new assistive technology. As of right now, we currently have multiple components attached to the RPi 4, such as our LiDAR, RPi Camera, tactile buttons attached via soldered jumper wires. For hardware components, the LiDAR camera is attached via externally with a USB C wire attached to the RPi 4. The RPi Camera is attached via the RPi 4's connector. Tactile buttons are attached externally and are controlled by using GPIO pins with two sets of jumper wires soldered together. As for software components, we currently have ... <br>
 
 
 ### Future Iterations of Mimir
