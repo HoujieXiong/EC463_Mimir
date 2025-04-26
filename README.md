@@ -32,7 +32,7 @@ In future iterations we tend to implement newer features to allow more interacti
 [📄 View User's Manual](./README-files/Users-Manual.pdf) <br>
 [📋 View Test Plans](./PreviousReports/PDRRWrittenReport.pdf) <br>
 [📑 View Test Reports](./README-files/Test-Report.pdf) <br>
-[📋 View Prototype Testing #1](./PreviousReports/PrototypeReport-1.pdf) <br>
-[📋 View Prototype Testing #2](./PreviousReports/PrototypeReport-2.pdf) <br>
+[🔬 View Prototype Testing #1](./PreviousReports/PrototypeReport-1.pdf) <br>
+[🔬 View Prototype Testing #2](./PreviousReports/PrototypeReport-2.pdf) <br>
 [💻 View Mimir's Software Components](./README-files/SOFTWARE.md) <br>
-[🔌 View Mimir's Hardware Components](./README-files/HARDWARE.md)
+[🔌⚡️ View Mimir's Hardware Components](./README-files/HARDWARE.md)
