@@ -24,7 +24,7 @@ text <br>
 
 
 ### Future Iterations of Mimir
-text <br>
+In future iterations we tend to implement newer features to allow more interactive components that can expand our goals of providing visually impaired individuals more accessibility while performing other assistants in daily duties, such as laundry, driving, and other personal care to name a few. Mimir has encapsulates future potential in providing better care for those of the visually impaired individuals, more independency and opportunities to live a better quality of life. <br>
 
 
 ### Links
