@@ -4,8 +4,8 @@ For our hardware of Mimir, we have multiple components that is connected our com
     - Raspberry Pi 4
     - LiDAR Camera 
     - Raspberry Pi Camera
-    - M/F Jumper Wires 
     - Battery Pack for RPi 4
+    - M/F Jumper Wires
     - Tactile Buttons
     - USB Microphone
 ```
