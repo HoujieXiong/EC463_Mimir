@@ -29,7 +29,7 @@ Raspberry Pi 4<br>
 </p>
 
 <p align="center">
-Current Device <br>
+Device Itself<br>
 </p>
 
 ### Schematics
