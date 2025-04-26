@@ -1,1 +1,0 @@
-FEEDBACK_PATH="feedback.txt"
