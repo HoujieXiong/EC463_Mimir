@@ -38,7 +38,7 @@ text <br>
 
 
 ### Power Requirements
-Our power requirments only involve the usage of an outlet thats plugged into the wall. This was due to multiple Raspberry Pi 4's being fried after multiple attempts of multithreading while having our attached battery to the Raspberry Pi 4. <br>
+Our power requirments only involves the usage of an USB C cord that can be plugged into the wall. This choice of power source was due to having multiple RPi's being fried from multiple attempts of attaching our battery pack and having the RPi perform multiple multithreading processes. <br>
 
 
 ### Vendor and Bill of Materials (BOM)
