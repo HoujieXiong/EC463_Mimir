@@ -23,7 +23,7 @@ When assmbing the device, we would first have our Raspberry Pi 4 (RPi 4), begin 
 <img src="./inner-device.jpg" width="50%">
 </p>
 <p align="center">
-Raspberry Pi 4<br>
+Raspberry Pi 4 (w/USB Microphone, RPi Camera attached)<br>
 </p>
 
 <!-- device itself -->
