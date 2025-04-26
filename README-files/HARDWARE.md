@@ -39,7 +39,7 @@ text <br>
 
 
 ### Power Requirements
-Our power requirments only involves the usage of an USB C cord that can be plugged into the wall. This choice of power source was due to having multiple RPi's being fried from multiple attempts of attaching our RPi's battery pack and having the RPi perform multiple multithreading processes. <br>
+Our power requirments only involves the usage of an USB C cord that can be plugged into the wall. This choice of power source was due to having multiple RPi's being fried from multiple attempts of attaching our RPi's battery pack and having the RPi perform multiple multithreading processes. Which was why we've decided to simply have our device powered via a USB C cord to supply power. <br>
 
 
 ### Vendor and Bill of Materials (BOM)
