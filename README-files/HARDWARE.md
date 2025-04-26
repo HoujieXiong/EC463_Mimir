@@ -12,16 +12,6 @@ For our hardware of Mimir, we have multiple components that is connected our com
 Combining all these components create our assistive device, Mimir.
 
 
-### Device
-<p align="center">
-<img src="./device.jpg" width="50%">
-</p>
-
-<p align="center">
-Current Device <br>
-</p>
-
-
 ### Assembling the Device
 When assmbing the device, we have  <br>
 
@@ -31,6 +21,15 @@ When assmbing the device, we have  <br>
 
 <p align="center">
 Raspberry Pi 4<br>
+</p>
+
+<!-- device itself -->
+<p align="center">
+<img src="./device.jpg" width="50%">
+</p>
+
+<p align="center">
+Current Device <br>
 </p>
 
 ### Schematics
