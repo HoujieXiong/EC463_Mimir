@@ -29,10 +29,10 @@ import unicodedata
 
 
 #GPIO buttons
-#from gpiozero import DigitalInputDevice, Device
-#from gpiozero.pins.lgpio import LGPIOFactory
+from gpiozero import DigitalInputDevice, Device
+from gpiozero.pins.lgpio import LGPIOFactory
 
-#Device.pin_factory = LGPIOFactory()
+Device.pin_factory = LGPIOFactory()
 
 import threading
 import time
@@ -393,9 +393,8 @@ say_text_espeak("Voice assistant is ready.")
 
 print("Listening...")
 
-#button_api = DigitalInputDevice(17)
-#button_hand_mode = DigitalInputDevice(4)
-
+button = DigitalInputDevice(21)
+button_buffer=button.value
 while True:
     # if button_api.value:
     #    on_api_released()
@@ -409,19 +408,32 @@ while True:
 
     # data_16k = audioop.ratecv(data, 2, 1, 44100, 16000, None)[0]
 
+    
+
+
+
     if recognizer.AcceptWaveform(data):
         result = json.loads(recognizer.Result())
         word = result.get("text", "")
         if word:
-            if voiceOn == 0 and word.lower() == "dictate":
+            if voiceOn == 0 and (word.lower() == "dictate"):
                 voiceOn = 1
                 say_text_espeak("Listening")
 
             elif voiceOn == 1:
                 voiceOn = 0
                 voice_command_decision(word)
-
-
+                say_text_espeak("deactivate Listening")
+                
+    if(button_buffer!=button.value):
+        button_buffer=button.value
+        if voiceOn == 0 :
+            voiceOn = 1
+            say_text_espeak("Listening")
+            
+        elif voiceOn == 1:
+            voiceOn = 0
+            say_text_espeak("deactivate Listening")
     # 2) Vision (non-blocking)
     if trackOn:
         frame = rgb_queue.tryGet()
