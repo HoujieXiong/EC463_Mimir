@@ -29,7 +29,7 @@ text <br>
 
 ### Links
 [📄 View User's Manual](./README-files/Users-Manual.pdf) <br>
-[💻 View Mimir's Software Components](./README-files/SOFTWARE.md) <br>
-[🔌 View Mimir's Hardware Components](./README-files/HARDWARE.md) <br>
 [📋 View Test Plans]() <br>
-[📑 View Test Reports]()
+[📑 View Test Reports]() <br>
+[💻 View Mimir's Software Components](./README-files/SOFTWARE.md) <br>
+[🔌 View Mimir's Hardware Components](./README-files/HARDWARE.md)
