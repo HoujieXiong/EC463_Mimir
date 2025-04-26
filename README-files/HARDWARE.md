@@ -43,8 +43,15 @@ Our power requirments only involves the usage of an USB C cord that can be plugg
 
 
 ### Vendor and Bill of Materials (BOM)
-text <br>
+<p align="center">
+<img src="./bom.jpg" width="50%">
+</p>
+<p align="center">
+Bills of Materials<br>
+</p>
+
 <br>
+
 More information can be found in our [User's Manual](./Users-Manual.pdf).<br>
 <br>
 
