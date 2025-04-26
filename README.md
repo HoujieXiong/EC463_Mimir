@@ -1,8 +1,11 @@
 # Mimir
-_Trust at First Sight!_ <br>
 
 <p align="center">
-<img src="./README-files/Mimir_logo.png" width="25%">
+<img src="./README-files/Mimir_logo.png" width="50%">
+</p>
+
+<p>
+_Trust at First Sight!_ <br>
 </p>
 
 ## Description
