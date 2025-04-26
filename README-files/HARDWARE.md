@@ -1,5 +1,5 @@
 # Mimir: Hardware Components
-For our hardware of Mimir, we have multiple components that is connected our computing source, Raspberry Pi 4.  The components are: <br>
+For our hardware of Mimir, we have multiple components that is connected our computing source, Raspberry Pi 4.  The components consists of <br>
 ```
     - Raspberry Pi 4
     - LiDAR Camera 
