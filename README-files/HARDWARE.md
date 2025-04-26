@@ -9,14 +9,15 @@ For our hardware of Mimir, we have multiple components that is connected our com
     - M/F Jumper Wires 
     - Tactile Buttons
 ```
+Combining all these components create our assistive device, Mimir.
 
 ### Device
 <p align="center">
-<img src="./README-files/device.jpg" width="50%">
+<img src="./device.jpg" width="50%">
 </p>
 
 <p align="center">
-<img src="./README-files/inner-device.jpg" width="50%">
+<img src="./inner-device.jpg" width="50%">
 </p>
 
 <p align="center">
