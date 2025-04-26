@@ -31,6 +31,6 @@ In future iterations we tend to implement newer features to allow more interacti
 ### Links
 [📄 View User's Manual](./README-files/Users-Manual.pdf) <br>
 [📋 View Test Plans]() <br>
-[📑 View Test Reports]() <br>
+[📑 View Test Reports](./README-files/Test-Report.pdf) <br>
 [💻 View Mimir's Software Components](./README-files/SOFTWARE.md) <br>
 [🔌 View Mimir's Hardware Components](./README-files/HARDWARE.md)
