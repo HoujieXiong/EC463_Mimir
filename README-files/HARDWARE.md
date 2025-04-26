@@ -29,7 +29,7 @@ Raspberry Pi 4<br>
 </p>
 
 <p align="center">
-Device Itself<br>
+Mimir Device<br>
 </p>
 
 ### Schematics
