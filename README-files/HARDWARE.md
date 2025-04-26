@@ -36,12 +36,13 @@ text <br>
 
 
 ### Power Requirements
-text <br>
+Our power requirments only involve the usage of a battery terminal. <br>
 
 
 ### Vendor and Bill of Materials (BOM)
 text <br>
-
+<br>
+More information can be found in our User's Manual.<br>
 
 ### References
 []() <br>
