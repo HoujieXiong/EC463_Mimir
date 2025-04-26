@@ -21,6 +21,6 @@ text <br>
 
 
 ### Links
-[📄 View User Manual](./README-files/Users-Manual.pdf)
-[💻 View Mimir's Software Components](./README-files/SOFTWARE.md)
+[📄 View User Manual](./README-files/Users-Manual.pdf) <br>
+[💻 View Mimir's Software Components](./README-files/SOFTWARE.md) <br>
 [🔌 View Mimir's Hardware Components](./README-files/HARDWARE.md)
