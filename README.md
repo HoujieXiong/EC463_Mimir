@@ -31,3 +31,5 @@ text <br>
 [📄 View User's Manual](./README-files/Users-Manual.pdf) <br>
 [💻 View Mimir's Software Components](./README-files/SOFTWARE.md) <br>
 [🔌 View Mimir's Hardware Components](./README-files/HARDWARE.md)
+[📋 View Test Plans]() <br>
+[📑 View Test Reports]()
