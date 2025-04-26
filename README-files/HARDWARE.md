@@ -15,6 +15,9 @@ Combining all these components create our assistive device, Mimir. Most of our c
 ### Assembling the Device
 When assmbing the device, we have  <br>
 
+<!-- Battery Terminal -->
+
+
 <!-- Raspberry Pi 4 -->
 <p align="center">
 <img src="./inner-device.jpg" width="50%">
