@@ -2,7 +2,7 @@
 _Trust at First Sight!_ <br>
 
 <p align="center">
-<img src="./README-files/Mimir_logo.png" width="50%">
+<img src="./README-files/Mimir_logo.png" width="25%">
 </p>
 
 ## Description
