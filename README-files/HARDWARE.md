@@ -9,11 +9,11 @@ For our hardware of Mimir, we have multiple components that is connected our com
     - Tactile Buttons
     - USB Microphone
 ```
-Combining all these components create our assistive device, Mimir. Most of our choices in designing our hardware of the device was mostly centered around out iniative towards having high computing power to process and perform multithreading of features and functions, such as our image processing, cloud client-server interactions, and hardware inputs/outputs. Which is why we mostly focused on using the Raspberry Pi 5, but evnetually switched to the Raspberry Pi 4 instead, due to the better capacity in maintining our various inputs/outputs.
+Combining all these components creates our assistive device, Mimir. Most of our choices in designing our hardware of the device was mostly centered around out iniative towards having high computing power to process and perform multithreading of features and functions, such as our image processing, cloud client-server interactions, and hardware inputs/outputs. Which is why we mostly focused on using the Raspberry Pi 5, but evnetually switched to the Raspberry Pi 4 instead, due to the better capacity in maintining our various inputs/outputs.
 
 
 ### Assembling the Device
-When assmbing the device, we have  <br>
+When assmbing the device, we would first have our Raspberry Pi 4 (RPi 4), begin by setting it firmly in its customized 3D-printed case. <br>
 
 <!-- Battery Terminal -->
 
@@ -46,6 +46,7 @@ Our power requirments only involve the usage of a battery terminal. <br>
 text <br>
 <br>
 More information can be found in our [User's Manual](./Users-Manual.pdf).<br>
+<br>
 
 ### References
 []() <br>
