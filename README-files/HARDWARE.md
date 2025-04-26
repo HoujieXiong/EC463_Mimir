@@ -49,4 +49,5 @@ More information can be found in our [User's Manual](./Users-Manual.pdf).<br>
 <br>
 
 ### References
+[User's Manual](./Users-Manual.pdf) <br>
 []() <br>
