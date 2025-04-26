@@ -7,8 +7,9 @@ For our hardware of Mimir, we have multiple components that is connected our com
     - M/F Jumper Wires 
     - Battery Pack for RPi 4
     - Tactile Buttons
+    - USB Microphone
 ```
-Combining all these components create our assistive device, Mimir. 
+Combining all these components create our assistive device, Mimir.
 
 
 ### Device
@@ -17,17 +18,20 @@ Combining all these components create our assistive device, Mimir.
 </p>
 
 <p align="center">
-<img src="./inner-device.jpg" width="50%">
-</p>
-
-<p align="center">
 Current Device <br>
 </p>
 
 
 ### Assembling the Device
-text <br>
+When assmbing the device, we have  <br>
 
+<p align="center">
+<img src="./inner-device.jpg" width="50%">
+</p>
+
+<p align="center">
+Raspberry Pi 4<br>
+</p>
 
 ### Schematics
 text <br>
@@ -41,5 +45,5 @@ text <br>
 text <br>
 
 
-### References:
+### References
 []() <br>
