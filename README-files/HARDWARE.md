@@ -1,6 +1,4 @@
 # Mimir: Hardware Components
-
-## Description
 For our hardware of Mimir, we have multiple components that is connected our computing source, Raspberry Pi 4.  The components are: <br>
 ```
     - Raspberry Pi 4
@@ -9,7 +7,8 @@ For our hardware of Mimir, we have multiple components that is connected our com
     - M/F Jumper Wires 
     - Tactile Buttons
 ```
-Combining all these components create our assistive device, Mimir.
+Combining all these components create our assistive device, Mimir. 
+
 
 ### Device
 <p align="center">
