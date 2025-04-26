@@ -4,7 +4,6 @@ For our hardware of Mimir, we have multiple components that is connected our com
     - Raspberry Pi 4
     - LiDAR Camera 
     - Raspberry Pi Camera
-    - Battery Pack for RPi 4
     - M/F Jumper Wires
     - Tactile Buttons
     - USB Microphone
@@ -39,7 +38,7 @@ text <br>
 
 
 ### Power Requirements
-Our power requirments only involve the usage of a battery terminal. <br>
+Our power requirments only involve the usage of an outlet thats plugged into the wall. This was due to multiple Raspberry Pi 4's being fried after multiple attempts of multithreading while having our attached battery to the Raspberry Pi 4. <br>
 
 
 ### Vendor and Bill of Materials (BOM)
