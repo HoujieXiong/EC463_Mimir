@@ -27,7 +27,7 @@ Raspberry Pi 4<br>
 <p align="center">
 <img src="./device.jpg" width="50%">
 </p>
-<br>
+
 <p align="center">
 Device Itself<br>
 </p>
