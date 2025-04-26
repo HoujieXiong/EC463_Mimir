@@ -5,6 +5,7 @@ For our hardware of Mimir, we have multiple components that is connected our com
     - LiDAR Camera 
     - Raspberry Pi Camera
     - M/F Jumper Wires 
+    - Battery Pack for RPi 4
     - Tactile Buttons
 ```
 Combining all these components create our assistive device, Mimir. 
@@ -40,5 +41,5 @@ text <br>
 text <br>
 
 
-### References to Data Sheets:
-text <br>
+### References:
+[]() <br>
