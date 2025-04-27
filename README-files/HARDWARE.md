@@ -6,13 +6,13 @@ For our hardware of Mimir, we have multiple components that is connected our com
     - Raspberry Pi Camera
     - M/F Jumper Wires
     - Tactile Button
-    - USB Microphone
+    - USB Microphone (Type-A)
 ```
-Combining all these components creates our assistive device, Mimir. Most of our choices in designing our hardware of the device was mostly centered around out iniative towards having high computing power to process and perform multithreading of features and functions, such as our image processing, cloud client-server interactions, and hardware inputs/outputs. Which is why we mostly focused on using the Raspberry Pi 5, but eventually switched to the Raspberry Pi 4 instead, due to the better capacity in maintining our various inputs/outputs.
+Combining all these components creates our assistive device, Mimir. Most of our choices in designing our hardware of the device was mostly centered around out iniative towards having high computing power to process and perform multithreading of features and functions, such as our image processing, cloud client-server interactions, and hardware inputs/outputs. Which is why we mostly focused on using the Raspberry Pi 5, but eventually switched to the Raspberry Pi 4 instead, due to the better capacity in maintining and managing all our various inputs/outputs and multiple processes.
 
 
 ### Assembling the Device
-When assmbing the device, we would first have our Raspberry Pi 4 (RPi 4), begin by setting it firmly in its customized 3D-printed case. Once set into the case, the LiDAR camera is placed into its housing unit, and the RPi Camera is attached to its docking camera feed. Next we attach the USB C cord from the LiDAR camera to the RPi, and attach screws to the RPi Camera to mount the camera to the lid of the case. The USB microphone can be attached to the USB input. Once fastened, the lid of the case can be closed and USB C cord can be plugged into a local wall outlet. The user can then press the button to initiate the device. <br>
+When assmbing the device, we would first have our Raspberry Pi 4 (RPi 4), begin by setting it firmly in its customized 3D-printed case. Once set into the case, the LiDAR camera is placed into its housing unit, and the RPi Camera is attached to its docking camera feed. Next we attach the USB C to USB A cord from the LiDAR camera to the RPi 4, and attach screws to the RPi Camera to mount the camera to the lid of the case. The USB microphone can be attached to the USB input. Once fastened, the lid of the case can be closed and USB C cord can be plugged into a local wall outlet. The user can then press the button to initiate the device. <br>
 
 <!-- Raspberry Pi 4 -->
 <p align="center">
@@ -21,7 +21,9 @@ When assmbing the device, we would first have our Raspberry Pi 4 (RPi 4), begin 
 <p align="center">
 Raspberry Pi 4 (w/USB Microphone, RPi Camera attached)
 </p>
+
 <br>
+
 <p align="center">
 <img src="./mimir_device_2.jpg" width="50%">
 </p>
@@ -44,7 +46,7 @@ Mimir Device<br>
 </p>
 
 ### Schematics
-text <br>
+In our schematics, we've only had  <br>
 
 
 ### Power Requirements
@@ -52,7 +54,7 @@ Our power requirments only involves the usage of an USB C cord that can be plugg
 
 
 ### Vendor and Bill of Materials (BOM)
-text
+Throughout our entirety of the project, most of our vendor of supplies were mostly met by submitting orders through Amazon. However, during our development we've had multiple trials and errors of damaging our RPi due to multiprocesses that we tried to load the RPi with. Eventually, we learned from the past iterations and were able to manage these multiprocesses properly and have our system firmly run on an RPi 4. This list shows the basic components that were used during the development to the final product.
 
 <p align="center">
 <img src="./bom.png" width="50%">
@@ -68,4 +70,3 @@ More information can be found in our [User's Manual](./Users-Manual.pdf).<br>
 
 ### References
 [User's Manual](./Users-Manual.pdf) <br>
-[]() <br>
