@@ -34,13 +34,13 @@ Raspberry Pi 4 (w/USB Microphone, RPi Camera attached)<br>
 <img src="./device.jpg" width="50%">
 </p>
 <p align="center">
-Mimir Device<br>
-</p>
-<p align="center">
 <img src="./mimir_device_3.jpg" width="50%">
 </p>
 <p align="center">
 <img src="./mimir_device_4.jpg" width="50%">
+</p>
+<p align="center">
+Mimir Device<br>
 </p>
 
 ### Schematics
