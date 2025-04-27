@@ -53,8 +53,15 @@ The schematic for Mimir is rather quite simple to follow as most of the hardware
 </p>
 
 ### Power Requirements
-Our power requirments only involves the usage of an USB C cord that can be plugged into the wall. This choice of power source was due to having multiple RPi's being fried from multiple attempts of attaching our RPi's battery pack and having the RPi perform multiple multithreading processes. Which was why we've decided to simply have our device powered via a USB C cord to supply power. <br>
+Our power requirments only involves the usage of an USB C cord that can be plugged into the wall. This choice of power source was due to having multiple RPi's being fried from multiple attempts of attaching our RPi's battery pack and having the RPi perform multiple multithreading processes. Which was why we've decided to simply have our device powered via a USB C cord to supply power. In these photos, the white cord is the USB C cord and the black cord is the connection between the LiDAR camera and USB terminals of the RPi 4 <br>
 
+<p align="center">
+<img src="./mimir_device_3.jpg" width="50%">
+</p>
+
+<p align="center">
+<img src="./mimir_device_4.jpg" width="50%">
+</p>
 
 ### Vendor and Bill of Materials (BOM)
 Throughout our entirety of the project, most of our vendor of supplies were mostly met by submitting orders through Amazon. However, during our development we've had multiple trials and errors of damaging our RPi due to multiprocesses that we tried to load the RPi with. Eventually, we learned from the past iterations and were able to manage these multiprocesses properly and have our system firmly run on an RPi 4. This list encompasses and shows all of the team's expenditures during throughout the entire development of the final product. Some components on the list were left out due to easier configurations (i.e. CPZZ Rechargable Battery pack).
