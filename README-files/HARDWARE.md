@@ -67,7 +67,7 @@ Our power requirments only involves the usage of an USB C cord that can be plugg
 Throughout our entirety of the project, most of our vendor of supplies were mostly met by submitting orders through Amazon. However, during our development we've had multiple trials and errors of damaging our RPi due to multiprocesses that we tried to load the RPi with. Eventually, we learned from the past iterations and were able to manage these multiprocesses properly and have our system firmly run on an RPi 4. This list encompasses and shows all of the team's expenditures during throughout the entire development of the final product. Some components on the list were left out due to easier configurations (i.e. CPZZ Rechargable Battery pack).
 
 <p align="center">
-<img src="./bom.jpg" width="50%">
+<img src="./bom.jpeg" width="50%">
 </p>
 <p align="center">
 Bills of Materials<br>
