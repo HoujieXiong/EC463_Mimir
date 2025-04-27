@@ -19,9 +19,9 @@ When assmbing the device, we would first have our Raspberry Pi 4 (RPi 4), begin 
 <img src="./inner-device.jpg" width="50%">
 </p>
 <p align="center">
-Raspberry Pi 4 (w/USB Microphone, RPi Camera attached)<br>
+Raspberry Pi 4 (w/USB Microphone, RPi Camera attached)
 </p>
-
+<br>
 <p align="center">
 <img src="./mimir_device_2.jpg" width="50%">
 </p>
@@ -30,12 +30,15 @@ Raspberry Pi 4 (w/USB Microphone, RPi Camera attached)<br>
 <p align="center">
 <img src="./device.jpg" width="50%">
 </p>
+
 <p align="center">
 <img src="./mimir_device_3.jpg" width="50%">
 </p>
+
 <p align="center">
 <img src="./mimir_device_4.jpg" width="50%">
 </p>
+
 <p align="center">
 Mimir Device<br>
 </p>
