@@ -30,6 +30,7 @@
   - Reads audio chunks and enters “command mode” on `dictate`.  
   - When `trackOn` is `True`, non-blocking fetches video frames, runs fingertip OCR, and speaks any detected words.
 
+
 ### 1.2 `start_va.sh`  
 **Purpose:** Wrapper script for cron/systemd that sets up the environment and launches the assistant at boot.
 
@@ -46,8 +47,9 @@
 5. Activates the virtual environment: `source /home/visualAI/Desktop/venv/bin/activate`
 6. Executes the assistant: `exec /home/visualAI/Desktop/venv/bin/python voice_assistant.py`
 
-## 2. Flowchart
 
+
+## 2. Flowchart
 
 ```mermaid
 flowchart LR
@@ -86,7 +88,7 @@ A[start_va.sh] --> B[voice_assistant.py]
     T --> R
 ```
 
-## 3. Dev/Build tool information
+## 3. Dev/Build Tools Information
 
 | Component           | Version         | Installation Method                                      |
 |---------------------|-----------------|----------------------------------------------------------|
@@ -110,7 +112,7 @@ A[start_va.sh] --> B[voice_assistant.py]
 
 ## 4. Installation from Scratch
 
-### 4.1. **System update & essentials**  
+### 4.1. **System Update & Essentials**  
    ```bash
    sudo apt update && sudo apt upgrade -y
    sudo apt install -y \
@@ -120,7 +122,7 @@ A[start_va.sh] --> B[voice_assistant.py]
      espeak mpg123 cmake libusb-1.0-0-dev build-essential
 ```
 
-### 4.2. **Clone & set up project**  
+### 4.2. **Clone & Set Up Project**  
    ```bash
    cd /home/visualAI/Desktop
    git clone https://github.com/HoujieXiong/EC463_Mimir.git
@@ -129,7 +131,7 @@ A[start_va.sh] --> B[voice_assistant.py]
    source venv/bin/activate
 ```
 
-### 4.3. **Install python dependencies**  
+### 4.3. **Install Python Dependencies**  
    ```bash
    pip install --upgrade pip
    pip install \
@@ -145,11 +147,11 @@ A[start_va.sh] --> B[voice_assistant.py]
      pexpect
 ```
 
-### 4.4. **Prepare startup script**  
+### 4.4. **Prepare Startup Script**  
    ```bash
    chmod +x start_va.sh
 ```
-### 4.5 **Configure auto-start with cron**  
+### 4.5 **Configure Auto-Start with Cron**  
    ```bash
    crontab -e
 
@@ -159,7 +161,7 @@ Add to the very bottom
    @reboot /home/visualAI/Desktop/voice_assistant/start_va.sh
    ```
 
-### 4.6. **Reboot and verify**  
+### 4.6. **Reboot and Verify**  
    ```bash
    sudo reboot
    tail -f /home/visualAI/Desktop/va.log
