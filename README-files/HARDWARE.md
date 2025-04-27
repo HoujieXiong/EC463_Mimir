@@ -28,12 +28,6 @@ Raspberry Pi 4 (w/USB Microphone, RPi Camera attached)<br>
 <p align="center">
 <img src="./mimir_device_2.jpg" width="50%">
 </p>
-<p align="center">
-<img src="./mimir_device_3.jpg" width="50%" alt="Image" style="transform: rotate(180deg);">
-</p>
-<p align="center">
-<img src="./mimir_device_4.jpg" width="50%" alt="Image" style="transform: rotate(180deg);">
-</p>
 
 <!-- device itself -->
 <p align="center">
@@ -41,6 +35,12 @@ Raspberry Pi 4 (w/USB Microphone, RPi Camera attached)<br>
 </p>
 <p align="center">
 Mimir Device<br>
+</p>
+<p align="center">
+<img src="./mimir_device_3.jpg" width="50%">
+</p>
+<p align="center">
+<img src="./mimir_device_4.jpg" width="50%">
 </p>
 
 ### Schematics
