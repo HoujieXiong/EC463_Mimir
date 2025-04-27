@@ -29,10 +29,10 @@ Raspberry Pi 4 (w/USB Microphone, RPi Camera attached)<br>
 <img src="./mimir_device_2.jpg" width="50%">
 </p>
 <p align="center">
-<img src="./mimir_device_3.jpg" width="50%">
+<img src="./mimir_device_3.jpg" width="50%" style="transform: rotate(90deg);">
 </p>
 <p align="center">
-<img src="./mimir_device_4.jpg" width="50%">
+<img src="./mimir_device_4.jpg" width="50%" style="transform: rotate(90deg);">
 </p>
 
 <!-- device itself -->
