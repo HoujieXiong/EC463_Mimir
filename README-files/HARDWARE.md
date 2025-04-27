@@ -49,7 +49,7 @@ Mimir Device<br>
 The schematic for Mimir is rather quite simple to follow as most of the hardware components are minimal. <br>
 
 <p align="center">
-<img src = "./README-files/schematic.jpeg" width = "50%">
+<img src = "./schematic.png" width = "50%">
 </p>
 
 ### Power Requirements
