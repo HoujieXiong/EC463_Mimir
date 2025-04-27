@@ -53,7 +53,7 @@ The schematic for Mimir is rather quite simple to follow as most of the hardware
 </p>
 
 ### Power Requirements
-Our power requirments only involves the usage of an USB C cord that can be plugged into the wall. This choice of power source was due to having multiple RPi's being fried from multiple attempts of attaching our RPi's battery pack and having the RPi perform multiple multithreading processes. Which was why we've decided to simply have our device powered via a USB C cord to supply power. In these photos, the white cord is the USB C cord and the black cord is the connection between the LiDAR camera and USB terminals of the RPi 4 <br>
+Our power requirments only involves the usage of an USB C cord that can be plugged into the wall. This choice of power source was due to having multiple RPi's being fried from multiple attempts of attaching our RPi's battery pack and having the RPi perform multiple multithreading processes. Which was why we've decided to simply have our device powered via a USB C cord to supply power. In these photos, the white cord is the USB C cord and the black cord is the connection between the LiDAR camera and USB terminals of the RPi 4. As well as the USB Microphone (type-A) connected to the USB terminals of the RPi 4. <br>
 
 <p align="center">
 <img src="./mimir_device_3.jpg" width="50%">
