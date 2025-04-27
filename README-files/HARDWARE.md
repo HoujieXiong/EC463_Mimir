@@ -46,7 +46,7 @@ Mimir Device<br>
 </p>
 
 ### Schematics
-The schematic for Mimir is rather quite simple to follow as most of the hardware components are minimal. <br>
+The schematic for Mimir is rather quite simple to follow as most of the hardware components are minimal. Both external components of Mimir device are the USB Microphone (Type-A) and LiDAR camera. Both of which are connected via USB terminals on the RPi 4. On top of the RPi 4 is the power supply, which is powered by the USB C cord to a local wall outlet. Internally within the casing of the Mimir device, there is only one single tactile button. Which is connected to the GPIO 21 pin via soldered M/F jumper wires to the RPi 4 board itself. <br>
 
 <p align="center">
 <img src = "./schematic.png" width = "50%">
@@ -57,7 +57,7 @@ Our power requirments only involves the usage of an USB C cord that can be plugg
 
 
 ### Vendor and Bill of Materials (BOM)
-Throughout our entirety of the project, most of our vendor of supplies were mostly met by submitting orders through Amazon. However, during our development we've had multiple trials and errors of damaging our RPi due to multiprocesses that we tried to load the RPi with. Eventually, we learned from the past iterations and were able to manage these multiprocesses properly and have our system firmly run on an RPi 4. This list shows the basic components that were used during the development to the final product.
+Throughout our entirety of the project, most of our vendor of supplies were mostly met by submitting orders through Amazon. However, during our development we've had multiple trials and errors of damaging our RPi due to multiprocesses that we tried to load the RPi with. Eventually, we learned from the past iterations and were able to manage these multiprocesses properly and have our system firmly run on an RPi 4. This list encompasses and shows all of the team's expenditures during throughout the entire development of the final product. Some components on the list were left out due to easier configurations (i.e. CPZZ Rechargable Battery pack).
 
 <p align="center">
 <img src="./bom.png" width="50%">
