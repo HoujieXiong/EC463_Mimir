@@ -2,11 +2,11 @@
 For our hardware of Mimir, we have multiple components that is connected our computing source, Raspberry Pi 4.  The components are <br>
 ```
     - Raspberry Pi 4
-    - LiDAR Camera 
+    - Oak-D Lite Fixed Focus LiDAR Camera 
     - Raspberry Pi Camera
     - M/F Jumper Wires
     - Tactile Button
-    - USB Microphone (Type-A)
+    - USB Microphone (USB Type-A)
 ```
 Combining all these components creates our assistive device, Mimir. Most of our choices in designing our hardware of the device was mostly centered around out iniative towards having high computing power to process and perform multithreading of features and functions, such as our image processing, cloud client-server interactions, and hardware inputs/outputs. Which is why we mostly focused on using the Raspberry Pi 5, but eventually switched to the Raspberry Pi 4 instead, due to the better capacity in maintining and managing all our various inputs/outputs and multiple processes.
 
@@ -46,8 +46,11 @@ Mimir Device<br>
 </p>
 
 ### Schematics
-In our schematics, we've only had  <br>
+The schematic for Mimir is rather quite simple to follow as most of the hardware components are minimal. <br>
 
+<p align="center">
+<img src = "./schematic.jpeg" width = "50%">
+</p>
 
 ### Power Requirements
 Our power requirments only involves the usage of an USB C cord that can be plugged into the wall. This choice of power source was due to having multiple RPi's being fried from multiple attempts of attaching our RPi's battery pack and having the RPi perform multiple multithreading processes. Which was why we've decided to simply have our device powered via a USB C cord to supply power. <br>
