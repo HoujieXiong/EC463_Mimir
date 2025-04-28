@@ -35,5 +35,5 @@ In future iterations we tend to implement newer features to allow more interacti
 [📑 View Previous Reports](./PreviousReports/) <br>
 [🔬 View Prototype Testing #1](./PreviousReports/PrototypeReport-1.pdf) <br>
 [🔬 View Prototype Testing #2](./PreviousReports/PrototypeReport-2.pdf) <br>
-[💻👾 View Mimir's Software Components](./README-files/SOFTWARE.md) <br>
-[🔌⚡️ View Mimir's Hardware Components](./README-files/HARDWARE.md)
+[💻👾 View Mimir's Software Components](./README-files/README_SOFTWARE.md) <br>
+[🔌⚡️ View Mimir's Hardware Components](./README-files/README_HARDWARE.md)
