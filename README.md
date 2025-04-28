@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-Trust at First Sight! <br>
+Trust at First Sight!
 </p>
 
 ### Description
