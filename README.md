@@ -29,7 +29,7 @@ In future iterations we tend to implement newer features to allow more interacti
 <br>
 
 ### Links
-[📄 View User's Manual](./README-files/Users-Manual.pdf) <br>
+[📄 View User's Manual](./PreviousReports/Users-Manual.pdf) <br>
 [📋 View Test Plans](./PreviousReports/PDRRWrittenReport.pdf) <br>
 [📑 View Test Reports](./README-files/Test-Report.pdf) <br>
 [📑 View Previous Reports](./PreviousReports/) <br>

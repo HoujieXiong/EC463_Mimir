@@ -75,8 +75,8 @@ Bills of Materials<br>
 
 <br>
 
-More information can be found in our [User's Manual](./Users-Manual.pdf).<br>
+More information can be found in our [User's Manual](./PreviousReports/Users-Manual.pdf).<br>
 <br>
 
-### References
-[User's Manual](./Users-Manual.pdf) <br>
+### Reference
+[User's Manual](./PreviousReports/Users-Manual.pdf) <br>
