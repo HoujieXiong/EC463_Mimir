@@ -1,11 +1,25 @@
 #!/bin/bash
+# -------- wrapper for cron/systemd ----------
 
-# Clear the log at the start of each run
-> /home/visualAI/Desktop/script_autostart.log
+set -e
 
-sleep 20  # Wait 20 seconds for hardware
+# wipe & start logging
+exec > /home/visualAI/Desktop/va.log 2>&1
 
-echo "$(date): Audio service ready, starting script..." >> /home/visualAI/Desktop/script_autostart.log
 
+# add any env you need *before* Python starts
+export AUDIODEV=pulse
+export SDL_AUDIODRIVER=pulse
+export HEADLESS=1                              
+
+# give the OS, PulseAudio and Bluetooth a moment to come up
+sleep 10
+
+cd /home/visualAI/Desktop/voice_assistant
+
+# run and send all output to a rotating log
 source /home/visualAI/Desktop/venv/bin/activate
-python /home/visualAI/Desktop/microphoneTesting/soundTest.py >> /home/visualAI/Desktop/script_autostart.log 2>&1
+exec /home/visualAI/Desktop/venv/bin/python \
+     /home/visualAI/Desktop/voice_assistant/voice_assistant.py
+
+#>> /home/visualAI/Desktop/va.log 2>&1
