@@ -26,6 +26,7 @@ For our current state of Mimir, we were able to attach multiple components to ou
 ### Future Iterations of Mimir
 In future iterations, we plan to implement newer features to allow more interactive components to further provide visually impaired individuals more accessibility while performing other daily tasks, such as laundry, driving, and other personal care to name a few. Mimir aims to provide visually impaired individuals more independence and opportunities to live a better quality of life. <br>
 
+### Demo!
 [![Demo Video](./README-files/demo-thumbnail.png)](https://www.youtube.com/watch?v=JQ2Q9POXLqE)<br>
 
 ### Links
